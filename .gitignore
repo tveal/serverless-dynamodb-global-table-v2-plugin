@@ -2,6 +2,7 @@ node_modules
 npm-debug.log
 .DS_Store
 .npm
+.npmrc
 
 # Logs
 logs
