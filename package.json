@@ -4,6 +4,7 @@
   "description": "This plugin manages DynamoDB global tables.",
   "author": "TVeal",
   "license": "MIT",
+  "homepage": "https://github.com/tveal/serverless-dynamodb-global-table-v2-plugin#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tveal/serverless-dynamodb-global-table-v2-plugin.git"
