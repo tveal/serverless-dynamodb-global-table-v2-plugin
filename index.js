@@ -11,19 +11,19 @@ class Plugin {
       'before:deploy:createDeploymentArtifacts': createAutoscalingArtifacts.bind(this),
       'after:deploy:deploy': deploy.bind(this),
     };
+    this.log = {
+      info: (msg) => {
+        this.serverless.cli.log(`[global-table-plugin] INFO ${msg}`);
+      },
+      error: (msg) => {
+        this.serverless.cli.log(`[global-table-plugin] ERROR ${msg}`);
+      },
+      warn: (msg) => {
+        this.serverless.cli.log(`[global-table-plugin] WARN ${msg}`);
+      },
+    };
   }
 
-  log = {
-    info: (msg) => {
-      this.serverless.cli.log(`[global-table-plugin] INFO ${msg}`);
-    },
-    error: (msg) => {
-      this.serverless.cli.log(`[global-table-plugin] ERROR ${msg}`);
-    },
-    warn: (msg) => {
-      this.serverless.cli.log(`[global-table-plugin] WARN ${msg}`);
-    },
-  }
 }
 
 module.exports = Plugin;
